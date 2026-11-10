@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html><head><meta charset="utf-8">
+<style>
+  body { font: 13px system-ui, sans-serif; width: 280px; margin: 12px; }
+  input[type=text] { width: 100%; box-sizing: border-box; padding: 6px; font-size: 13px; }
+  label { display: block; margin: 8px 0 2px; }
+  .row { display: flex; gap: 6px; margin-top: 10px; }
+  button { flex: 1; padding: 6px; cursor: pointer; }
+  #msg { color: #666; margin-top: 6px; min-height: 1em; }
+</style></head>
+<body>
+  <input type="text" id="title" placeholder="New tab title" autofocus>
+  <label><input type="radio" name="scope" value="url" checked> This exact page</label>
+  <label><input type="radio" name="scope" value="site"> Whole site (<span id="host"></span>)</label>
+  <div class="row">
+    <button id="save">Save</button>
+    <button id="reset">Reset</button>
+  </div>
+  <div id="msg"></div>
+  <script src="popup.js"></script>
+</body></html>
